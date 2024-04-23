@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adastra</title>
+    <meta name="description" content="Space community that covering the lastest news">
+    <meta name="keywords" content="adastra, space, rocket launch, rocket, mission, update, nasa">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header> 
+
+        <!-- Navbar en principio fue puro css, despues pase a bootstrap (todos los html)-->
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="./index.html">
+                <img src="./images/adastraLogo.png" alt="adastra logo" class="logo">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="./pages/news.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            News
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./pages/news.html #missions">Missions</a></li>
+                            <li><a class="dropdown-item" href="./pages/news.html #space">Space</a></li>
+                            <li><a class="dropdown-item" href="./pages/news.html #launches">Launches</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/launchschedule.html">Launch Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <a href="./pages/joinus.html"><button class="navButton">Join us!</button></a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        
+    </header>
+
+    <div class="main__container">
+
+        <img src="./images/mainbackground1.jpg" alt="firstbackground" class="main__background">
+
+        <div class="mainTitle__container">
+            <p class="mainTitle">
+                <span>We are the biggest space community!<br></span>
+                <span>We deliver to you all the news about space, launches, missions updates and more!<br></span>
+                <span>Join us in the infinite neighbourhood.</span>
+            </p>
+        </div>
+        
+    </div>
+
+    <div class="main__container">
+
+        <img src="./images/mainbackground2.jpg" alt="secondbackground" class="main__background">
+        
+        <div class="secondTitle__container">
+
+            <span>Lastest launch</span>
+            <h2>
+                Starship IFT 3
+            </h2>
+    
+            <a href="https://www.youtube.com/watch?v=97GOcZ08tc4" target="_blank" class="button__video">Rewatch</a>
+        </div>
+
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer__left">
+            <span>AdAstra<br></span>
+            <span>Do you want to work with us?<br></span>
+            <span>Check out our <a href="">Careers</a></span>
+            <span>© 2024 <a href="">www.adastra.com</a> All rights reserved.</span>
+        </div>
+
+        <div class="footer__center">
+            <form action="" class="footer__center__form">
+                <p>Subscribe to newsletter!</p>
+
+                <input type="email" placeholder="Email address" required>
+    
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="footer__right">
+            <div>
+                <p>Follow us!</p>
+                <div class="social">
+                    <a href="https://www.instagram.com/nasa" target="_blank"><img src="./images/instagram_icon.png" alt="instagramIcon"></a>
+                    <a href="https://twitter.com/NASA" target="_blank"><img src="./images/x_icon.png" alt="twitterIcon"></a>
+                    <a href="https://www.linkedin.com/company/nasa" target="_blank"><img src="./images/linkedin_icon.png" alt="linkedinIcon"></a>
+                    <a href="https://www.youtube.com/@NASA" target="_blank"><img src="./images/youtube_icon.png" alt="youtubeIcon"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
