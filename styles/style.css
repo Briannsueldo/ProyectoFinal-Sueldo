@@ -266,7 +266,6 @@ nav ul li {
 
 
 
-
 .main__container {
     display: flex;
     align-items: center;
@@ -276,7 +275,7 @@ nav ul li {
 
 .main__background {
     width: 100%;
-    height: auto;
+    /* height: auto; */
     position: relative;
 }
 
@@ -362,7 +361,63 @@ nav ul li {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
+/* /* /* /* /* /* Carousel /* /* /* /*  */
 
+img {
+    height: 100vh;          /* Esto se hizo para ajustar las imagenes anteriores a las nuevas del carrusel a la hora del responsive */
+    object-fit: cover;
+}
+
+.carousel-item {
+    position: relative;
+    float: inline-start;
+    width: 100%;
+    /* margin-right: -100%; */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .4s ease-in-out;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel__link {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    background: transparent;
+    position: absolute;
+    align-items: center;
+    text-align: center;
+}
+
+.carousel__link p {
+    margin-bottom: 0 !important;
+    background: none;
+}
+
+.carousel__link h2 {
+    background: none;
+    font-weight: 500;
+    font-size: xxx-large;
+}
+
+.carousel__button {
+    position: relative;
+    display: flex;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(256, 256, 256, 0.8);
+    align-items: center;
+    justify-content: center;
+    /* padding-inline: 7vh; */
+    width: 20vh;
+    padding-block: 2.5vh;
+    border-radius: 0.3vh;
+}
+
+.active {
+    display: flex !important;
+}
 
 
 
