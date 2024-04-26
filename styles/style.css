@@ -414,6 +414,7 @@ img {
     padding-block: 2.5vh;
     border-radius: 0.3vh;
     transition: 0.7s ease all;
+    text-decoration: none;
 }
 
 .carousel__button:hover {
