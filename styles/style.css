@@ -405,7 +405,7 @@ img {
     position: relative;
     display: flex;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.3);
+    background: none;
     border: 2px solid rgba(256, 256, 256, 0.8);
     align-items: center;
     justify-content: center;
@@ -413,6 +413,13 @@ img {
     width: 20vh;
     padding-block: 2.5vh;
     border-radius: 0.3vh;
+    transition: 0.7s ease all;
+}
+
+.carousel__button:hover {
+    color: #000;
+    background-color: #fff;
+    font-weight: 500;
 }
 
 .active {
