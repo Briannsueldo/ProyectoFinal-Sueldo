@@ -188,7 +188,7 @@ header {
     flex-direction: column;
     row-gap: 10vh;
     position: relative;
-    width: 90%;
+    width: 80%;
     margin-top: 10vh;
     background-color: #FBFBFE;
 }
@@ -202,6 +202,10 @@ header {
     flex-direction: row;
     overflow: hidden;
     transition: 0.5s ease all;
+}
+
+.main__container:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
 .main__container:hover {
@@ -246,6 +250,8 @@ header {
     align-items: flex-end;
     padding-inline: 2vh;
     background: none;
+    margin: 0;
+    align-items: center;
 }
 
 .second__container span {
@@ -260,9 +266,38 @@ header {
     display: flex;
     grid-row: span 3;
     padding-inline: 2vh;
-    align-items: center;
     background: none;
     overflow: hidden;
+    font-weight: 500;
+    margin-bottom: 1vh;
+    align-items: baseline;
+}
+
+.data__container {
+    display: flex !important;
+    position: relative;
+    background: none;
+    margin-inline: 2vh;
+    gap: 2vh;
+    height: fit-content;
+}
+
+.data__container span:nth-child(1) {
+    border: 1px solid #c94345;
+    color: #fff;
+    background-color: #c94345;
+    height: fit-content;
+    border-radius: 1vh;
+    font-weight: 500
+}
+
+.data__container span:nth-child(2) {
+    border: 1px solid #1f5aa7;
+    color: #fff;
+    background-color: #1f5aa7;
+    height: fit-content;
+    border-radius: 1vh;
+    font-weight: 500
 }
 
 
@@ -474,7 +509,12 @@ header {
         height: 50%;
     }
 
+    .second__container h2, div {
+        justify-content: center;
+    }
+
     .first__container {
         height: 50%;
     }
+
 }
