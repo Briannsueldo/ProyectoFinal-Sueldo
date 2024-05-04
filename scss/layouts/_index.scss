@@ -1,0 +1,132 @@
+
+.main__container {
+    @extend .flex-center;
+    width: 100%;
+
+    @include mobile {
+        position: relative;
+        height: 100vh;
+    }
+
+    .main__background {
+        width: 100%;
+        position: relative;
+
+        @include mobile {
+            background-size: auto;
+            background-position: center;
+            height: 100vh;
+            object-fit: cover;
+        }
+    }
+
+    .mainTitle__container {
+        @extend .flex-center;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        font-size: x-large;
+        color: #fff;
+        background-color: transparent;
+
+        .mainTitle {
+            background: transparent;
+
+            @include mobile {
+                height: auto;
+                flex-direction: column;
+                row-gap: 1vh;
+            }
+
+            span {
+                background-color: transparent;
+                font-family: "Roboto", sans-serif;
+                font-style: italic;
+                font-weight: 100;
+
+                &:first-child {
+                    display: flex;
+                    font-weight: 400;
+                }
+
+                &:last-child {
+                    display: flex;
+                    justify-content: end;
+                    font-weight: 100;
+                }
+
+                @include mobile {
+                    &:nth-child(2) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/* /* /* /* /* /* Carousel /* /* /* /*  */
+
+img {
+    height: 100vh;          /* Esto se hizo para ajustar las imagenes anteriores a las nuevas del carrusel a la hora del responsive */
+    object-fit: cover;
+}
+
+.carousel-item {
+    position: relative;
+    float: inline-start;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .4s ease-in-out;
+    align-items: center;
+    justify-content: center;
+
+    .carousel__link {
+        @extend .flex-center;
+        flex-direction: column;
+        color: #fff;
+        background: transparent;
+        position: absolute;
+        text-align: center;
+
+        p {
+            margin-bottom: 0 !important;
+            background: none;
+        }
+
+        h2 {
+            background: none;
+            font-weight: 500;
+            font-size: xxx-large;
+        }
+
+        .carousel__button {
+            @extend .flex-center;
+            position: relative;
+            color: #fff;
+            background: none;
+            border: 2px solid rgba(256, 256, 256, 0.8);
+            width: 20vh;
+            padding-block: 2.5vh;
+            border-radius: 0.3vh;
+            transition: 0.7s ease all;
+            text-decoration: none;
+
+            &:hover {
+                color: #000;
+                background-color: #fff;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.active {
+    display: flex !important;
+}
+
+
