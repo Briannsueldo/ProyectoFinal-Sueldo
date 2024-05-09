@@ -1,0 +1,89 @@
+
+.contact__title__container {
+    display: flex;
+    position: relative;
+    height: 20vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact__title__container h2 {
+    font-family: "roboto", sans-serif;
+    font-size: 3vh;
+}
+
+.contact__main__container {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-bottom: 10vh;
+}
+
+.info__container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline: 5%;
+    width: 40%;
+}
+
+.info__container p {
+    font-family: "Roboto", sans-serif;
+}
+
+.contact__container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline: 5%;
+    width: 40%;
+    
+}
+
+.form__contact {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
+.form__groups:nth-of-type(5) textarea {
+    height: 15vh;
+    resize: none;
+}
+
+.form__groups {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.form__groups label {
+    font-family: "roboto", sans-serif;
+    font-weight: 500;
+}
+
+.form__contact input, textarea {
+    height: 3vh;
+    border-radius: 2.5px;
+    border: 1px solid #000;
+}
+
+.form__contact button {
+    height: 6vh;
+    border-radius: 2.5px;
+    border: 1px solid #000;
+    transition: 0.5s ease all;
+}
+
+.form__contact button:hover {
+    transition: 0.5s ease all;
+    background-color: rgba(0, 0, 0, 1);
+    color: rgb(234, 255, 106);
+    border: 2px solid rgb(234, 255, 106);
+}

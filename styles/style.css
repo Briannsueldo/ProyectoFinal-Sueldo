@@ -1,0 +1,641 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sixtyfour:SCAN@-32&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+
+
+* {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    width: 100%;
+}
+
+/* /////////////// Todo el nav /////////////// 
+
+.logo {
+    height: 50px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding-inline: 5%;
+    height: 10vh;
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navList {
+    display: flex;
+    align-items: center;
+    gap: 10vh;
+    list-style: none;
+    background-color: #000;
+}
+
+.menu__vertical {
+    position: relative;
+    padding: 1vh;
+}
+
+.menu__vertical__style {
+    position: absolute;
+    list-style: none;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: overflow 1s ease, visibility 1s ease;
+}
+
+.menu__vertical:hover .menu__vertical__style {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+}
+
+.menu__vertical__style li {
+    padding: 2vh;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu__vertical__style li:hover {
+    background-color: #fff;
+}
+
+.menu__vertical__style li:hover a {
+    color: #000;
+    font-weight: 500;
+}
+
+.menu__vertical__style li a {
+    text-decoration: none;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+.navList li:hover .menu__vertical__style {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+}
+
+
+
+/** nav ul li unicamente para solucionar linea blanca debajo de los items
+nav ul li {
+    background-color: #000;
+    transition: 0.5s ease all;
+}
+
+.nav__item:hover {
+    transform: scale(1.1);
+}
+
+.navItem {
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+}
+
+.navButton {
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #fff;
+    padding: 1vh;
+    padding-inline: 2vh;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.5s ease all;
+}
+
+.navButton:hover {
+    transform: scale(1.1);
+    background-color: #fff;
+    color: #000;
+}
+
+*/
+
+
+
+/* /* /* /* Nav con bootstrap /* /* /* /* */
+
+.logo {
+    height: 3vh;
+}
+
+.bg-body-tertiary {
+    background-color: #000 !important;
+    height: 10vh;
+    z-index: 1;
+    padding-block: 0;
+    border-bottom: 1px solid #fff;
+}
+
+.navbar-nav {
+    column-gap: 5vh;
+    align-items: center;
+    padding: 1vh;
+}
+
+.navbar-expand-lg .navbar-collapse {
+    justify-content: end;
+}
+
+.navbar-brand, .nav-link {
+    color: #fff;
+    transition: 0.5s ease all;
+}
+
+.nav-link:hover {
+    color: #d6d5d5;
+    transform: scale(1.05);
+}
+
+.navButton {
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #fff;
+    padding: 1vh;
+    padding-inline: 2vh;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.5s ease all;
+}
+
+.navButton:hover {
+    transform: scale(1.05);
+    background-color: #fff;
+    color: #000;
+}
+
+.nav-link:focus, .nav-link:hover {
+    color: #fff !important;
+}
+
+.dropdown-item {
+    color: #fff;
+    /* background-color: #000; */
+    padding: 1vh;
+    /* border-bottom: 1px solid #fff; */
+    text-align: center;
+    /* border-radius: 1vh; */
+}
+
+
+.dropdown-item:hover {
+    background-color: #fff;
+    color: #000;
+    transition: 0.5s ease all;
+}
+
+.dropdown-menu {
+    top: 100%;
+    left: -5vh !important;
+    padding: 0;
+}
+
+.dropdown-menu li:first-child {
+    background: #000;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-radius: 5px 5px 0 0;
+}
+
+.dropdown-menu li:nth-child(2) {
+    background: #000;
+    border-right: 2px solid #fff;
+    border-left: 2px solid #fff;
+}
+
+.dropdown-menu li:last-child {
+    background: #000;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-radius: 0 0 5px 5px;
+}
+
+
+
+.navbar-nav .nav-link.show {
+    justify-content: center;
+    display: flex;              /* Fix para el menu despegable al reducir pantalla */
+    align-items: center;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    display: flex;          
+    align-items: center;        /* Lo mismo que arriba pero cuando no se reduce la pantalla */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(256, 256, 256, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+
+
+
+
+
+
+
+
+
+.main__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.main__background {
+    width: 100%;
+    /* height: auto; */
+    position: relative;
+}
+
+.mainTitle__container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    color: #fff;
+    background-color: transparent;
+}
+
+.mainTitle {
+    background: transparent;
+}
+
+.mainTitle span {
+    background-color: transparent;
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    font-weight: 100;
+}
+
+.mainTitle span:first-child {
+    display: flex;
+    font-weight: 400;
+}
+
+.mainTitle span:last-child {
+    display: flex;
+    justify-content: end;
+    font-weight: 100;
+}
+
+.secondTitle__container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    row-gap: 2vh;
+}
+
+.secondTitle__container span {
+    color: #fff;
+    background: transparent;
+    font-family: "Roboto", sans-serif;
+    right: 122px;
+    top: 25px;
+    position: relative;
+}
+
+.secondTitle__container h2 {
+    color: #fff;
+    background: transparent;
+    font-size: 6vh;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    
+}
+
+.secondTitle__container a {
+    padding: 2vh;
+    padding-inline: 5vh;
+    color: #fff;
+    background: transparent;
+    text-decoration: none;
+    border: 3px solid #fff;
+    font-family: "Roboto", sans-serif;
+    transition: 0.5s ease;
+
+}
+
+.secondTitle__container a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* /* /* /* /* /* Carousel /* /* /* /*  */
+
+img {
+    height: 100vh;          /* Esto se hizo para ajustar las imagenes anteriores a las nuevas del carrusel a la hora del responsive */
+    object-fit: cover;
+}
+
+.carousel-item {
+    position: relative;
+    float: inline-start;
+    width: 100%;
+    /* margin-right: -100%; */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .4s ease-in-out;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel__link {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    background: transparent;
+    position: absolute;
+    align-items: center;
+    text-align: center;
+}
+
+.carousel__link p {
+    margin-bottom: 0 !important;
+    background: none;
+}
+
+.carousel__link h2 {
+    background: none;
+    font-weight: 500;
+    font-size: xxx-large;
+}
+
+.carousel__button {
+    position: relative;
+    display: flex;
+    color: #fff;
+    background: none;
+    border: 2px solid rgba(256, 256, 256, 0.8);
+    align-items: center;
+    justify-content: center;
+    /* padding-inline: 7vh; */
+    width: 20vh;
+    padding-block: 2.5vh;
+    border-radius: 0.3vh;
+    transition: 0.7s ease all;
+    text-decoration: none;
+}
+
+.carousel__button:hover {
+    color: #000;
+    background-color: #fff;
+    font-weight: 500;
+}
+
+.active {
+    display: flex !important;
+}
+
+
+
+
+
+/* /* /* /* /* /* FOOTER /* /* /* /*  */
+
+
+.footer {
+    top: 100%;
+    height: 20vh;
+    width: 100%;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: red;
+    background-color: #000;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+
+/* Footer left */
+
+.footer__left {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    margin: 2vh;
+}
+
+.footer__left span:first-child {
+    font-weight: 300;
+}
+
+.footer__left span:nth-child(2) {
+    font-weight: 100;
+}
+
+.footer__left span:nth-child(3) {
+    font-weight: 100;
+}
+
+.footer__left span:nth-child(3) a {
+    font-weight: 300;
+}
+
+.footer__left span:last-child {
+    display: flex;
+    align-items: end;
+    height: 100%;
+    font-weight: 100;
+}
+
+.footer__left span {
+    background-color: transparent;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+}
+
+.footer__left span a {
+    background-color: transparent;
+    text-decoration: none;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+/* Footer center */
+
+.footer__center__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2vh;
+    background-color: transparent;
+    margin-top: 2vh;
+}
+
+.footer__center p {
+    color: #fff;
+    background-color: transparent;
+    font-family: "Roboto", sans-serif;
+}
+
+.footer__center input {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    font-family: "Roboto", sans-serif;
+    padding: 1vh;
+    
+}
+
+.footer__center input::placeholder {
+    text-align: center;
+    font-size: 2vh;
+}
+
+.footer__center button {
+    color: #fff;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    padding: 0.5vh;
+    font-family: "Roboto", sans-serif;
+    transition: 0.5s ease;
+    min-height: 5vh;
+    min-width: 10vh;
+    font-weight: 500;
+}
+
+.footer__center button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+
+        /* Footer right */  
+
+.footer__right {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    background-color: transparent;
+    margin: 2vh;
+    
+}
+
+.footer__right div {
+    background-color: transparent;
+}
+
+.footer__right div p {
+    color: #fff;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+}
+
+.footer__right div div a {
+    background-color: transparent;
+    
+}
+
+.footer__right div div a img {
+    background-color: transparent;
+    height: 3vh;
+    padding-inline: 1vh;
+    padding-top: 1vh;
+}
+
+
+
+
+
+/* /* /* /* /*  Footer mediaqueries /* /* /* /* */
+
+@media (max-width: 520px) {
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+        .footer__left {
+            display: none;
+        }
+
+        .footer__right {
+            align-items: center;
+            padding-block: 3vh;
+        }
+}
+
+
+/* /* /* /* /*  General mediaqueries /* /* /* /* */
+
+@media (max-width: 520px) {
+
+    .mainTitle {
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        row-gap: 1vh;
+    }
+
+    .mainTitle span {
+        font-weight: 100;
+        font-size: 2vh;
+    }
+
+    .main__container {
+        position: relative;
+        height: 100vh;
+    }
+
+    .main__background {
+        background-size: auto;
+        background-position: center;
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .secondTitle__container span {
+        right: 83px;
+    }
+}
+
+
+

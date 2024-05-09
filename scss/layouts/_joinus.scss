@@ -1,0 +1,282 @@
+
+
+
+.main__container {
+    @extend .flex-center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    .background__overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(256, 256, 256, 0.2);
+    }
+
+    .joinus__background {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .form__container {
+        display: flex;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.4);
+        width: 700px;
+        border-radius: 10px;
+
+        @include tablet {
+            width: 400px;
+        }
+
+        @include mobile {
+            width: 300px;
+        }
+
+        .login__container {
+            display: flex;
+            position: relative;
+            height: 500px;
+            width: 50%;
+            background-color: transparent;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            @include tablet {
+                width: 100%;
+            }
+
+            h2 {
+                display: flex;
+                position: relative;
+                justify-content: center;
+                align-items: center;
+                padding: 10%;
+                background-color: transparent;
+                color: #fff;
+            }
+
+            form {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                flex-direction: column;
+                background-color: transparent;
+
+                .login__input {
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    display: flex;
+                    width: 100%;
+                    padding-bottom: 10px;
+                    background-color: transparent;
+
+                    input {
+                        width: 55%;
+                        padding: 10px;
+                        background-color: transparent;
+                        border: none;
+                        border-bottom: 1px solid #fff;
+                        outline: none;
+                        color: #fff;
+                        transition: 0.5s;
+
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+
+                        &::placeholder {
+                            color: #fff;
+                        }
+
+                        @include tablet {
+                            width: 60%;
+                        }
+                    }
+                }
+
+                .remember__input {
+                    position: relative;
+                    right: 10.5%;
+                    padding-bottom: 10px;
+                    background-color: transparent;
+
+                    label {
+                        background-color: transparent;
+                        color: #fff;
+                    }
+                }
+
+                a {
+                    position: relative;
+                    right: 4.5%;
+                    background-color: transparent;
+                    color: #fff;
+                }
+
+                button {
+                    margin: 8%;
+                    padding: 2.5%;
+                    width: 55%;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    border: none;
+                    transition: 0.5s ease;
+
+                    &:hover {
+                        background-color: rgb(234, 255, 106);
+                    }
+
+                    @include mobile {
+                        margin-top: 15%;
+                    }
+                }
+
+                .register__low__size {
+                    display: none;
+                    margin: 2%;
+                    padding: 2.5%;
+                    width: 55%;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    border: none;
+                    transition: 0.5s ease;
+
+                    @include tablet {
+                        display: block;
+                    }
+                }
+            }
+
+            .login__methods__container {
+                display: flex;
+                background-color: transparent;
+                flex-direction: column;
+                padding-bottom: 10%;
+
+                p {
+                    background-color: transparent;
+                    color: #fff;
+                    text-align: center;
+                }
+
+                .login__methods {
+                    background-color: transparent;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    gap: 10px;
+                    top: 10px;
+
+                    a {
+                        background-color: transparent;
+                        left: 0;
+                    }
+
+                    img {
+                        background: none;
+                        height: 100%;
+                        padding-inline: 1vh;
+                        align-items: center;
+                    }
+                }
+
+                @include tablet {
+                    display: none;
+                }
+            }
+        }
+
+        .register__container {
+            height: 500px;
+            width: 50%;
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-left: 1px solid #fff;
+
+            @include tablet {
+                display: none;
+            }
+
+            h2 {
+                display: flex;
+                position: relative;
+                justify-content: center;
+                align-items: center;
+                padding: 10%;
+                background-color: transparent;
+                color: #fff;
+            }
+
+            form {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                flex-direction: column;
+                background-color: transparent;
+
+                .register__input {
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    display: flex;
+                    width: 100%;
+                    padding-bottom: 10px;
+                    background-color: transparent;
+
+                    input {
+                        width: 55%;
+                        padding: 10px;
+                        background-color: transparent;
+                        border: none;
+                        border-bottom: 1px solid #fff;
+                        outline: none;
+                        color: #fff;
+                        transition: transform 0.5 ease;
+
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+
+                        &::placeholder {
+                            color: #fff;
+                        }
+                    }
+                }
+
+                .terms__input {
+                    position: relative;
+                    background-color: transparent;
+                    font-size: 14px;
+
+                    label {
+                        background-color: transparent;
+                        color: #fff;
+                    }
+                }
+            }
+
+            button {
+                margin: 6%;
+                padding: 2.5%;
+                width: 55%;
+                background-color: #fff;
+                border-radius: 5px;
+                border: none;
+                transition: 0.5s ease;
+
+                &:hover {
+                    background-color: rgb(234, 255, 106);
+                }
+            }
+        }
+    }
+}
+

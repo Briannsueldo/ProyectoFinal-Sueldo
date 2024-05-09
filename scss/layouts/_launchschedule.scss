@@ -1,0 +1,166 @@
+
+.background {
+    @extend .flex-center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    img {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 10vh;
+    }
+
+    h3 {
+        @extend .flex-center;
+        position: absolute;
+        width: 100%;
+        background: transparent;
+        color: #fff;
+        font-weight: 400;
+        font-size: 3vh;
+    }
+}
+
+.section__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10vh;
+    position: relative;
+    width: 80%;
+    margin-block: 10vh;
+    background-color: $main-w;
+
+    .main__container {
+        display: flex;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 30px;
+        height: 300px;
+        flex-direction: row;
+        overflow: hidden;
+        transition: 0.5s ease all;
+
+        @include desk__small {
+            flex-direction: column;
+            height: 50vh;
+        }
+
+        &:hover {
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            transform: scale(1.01);
+        }
+
+        .first__container {
+            display: flex;
+            position: relative;
+            background-color: #fff;
+            border-radius: 30px 0 0 30px;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+
+            @include desk__small {
+                justify-content: center;
+                height: 50%;
+            }
+
+            .schedule__left__image {
+                border-radius: 30px 0 0 30px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+
+                @include desk__small {
+                    border-radius: 30px 30px 0 0;
+                }
+            }
+        }
+
+        .second__container {
+            display: grid;
+            grid-template-rows: repeat(5, 1fr);
+            position: relative;
+            background-color: rgb(229, 229, 229);
+            border-radius: 0 30px 30px 0;
+            width: 100%;
+            height: 100%;
+
+            @include desk__small {
+                border-radius: 0 0 30px 30px;
+                background-color: #d3d3d3;
+                height: 50%;
+            }
+
+            h2 {
+                display: flex;
+                align-items: flex-end;
+                padding-inline: 2vh;
+                background: none;
+                margin: 0;
+                align-items: center;
+
+                @include desk__small {
+                    justify-content: center;
+                }
+            }
+
+            .data__container {
+                display: grid;
+                display: flex !important;
+                position: relative;
+                background: none;
+                margin-inline: 2vh;
+                gap: 2vh;
+                height: fit-content;
+
+                @include desk__small {
+                    justify-content: center;
+                }
+
+                span {
+                    display: flex;
+                    align-items: flex-start;
+                    padding-inline: 2vh;
+                    background: none;
+
+                    &:nth-child(1) {
+                        border: 1px solid #c94345;
+                        color: #fff;
+                        background-color: #c94345;
+                        height: fit-content;
+                        border-radius: 1vh;
+                        font-weight: 500
+                    }
+
+                    &:nth-child(2) {
+                        border: 1px solid #1f5aa7;
+                        color: #fff;
+                        background-color: #1f5aa7;
+                        height: fit-content;
+                        border-radius: 1vh;
+                        font-weight: 500
+                    }
+                }
+            }
+
+            p {
+                display: flex;
+                grid-row: span 3;
+                padding-inline: 2vh;
+                background: none;
+                overflow: hidden;
+                font-weight: 500;
+                margin-bottom: 1vh;
+                align-items: baseline;
+            }
+        }
+    }
+}
+
+/* .second__container div {
+    display: grid;
+} */
