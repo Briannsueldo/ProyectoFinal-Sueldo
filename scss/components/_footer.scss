@@ -64,14 +64,16 @@
     // FOOTER CENTER //
 
     .footer__center {
+        @extend .flex-center;
 
         .footer__center__form {
+            width: fit-content;
             display: flex;
             flex-direction: column;
             align-items: center;
             row-gap: 2vh;
             background-color: transparent;
-            margin-top: 2vh;
+            margin: 2vh;
         }
     
         p {
@@ -98,6 +100,7 @@
         }
     
         button {
+            position: relative;
             color: #fff;
             background-color: transparent;
             border-radius: 5px;
@@ -106,7 +109,7 @@
             font-family: "Roboto", sans-serif;
             transition: 0.5s ease;
             min-height: 5vh;
-            min-width: 10vh;
+            width: 100%;
             font-weight: 500;
     
             &:hover {

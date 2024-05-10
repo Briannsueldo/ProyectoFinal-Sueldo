@@ -36,15 +36,20 @@
                 
                 .dropdown-toggle {
 
+                    &::after {
+                        content: none;
+                    }
+
                     &:hover {
-                        transform: none;
+                        color: #d6d5d5;
+                        transform: scale(1.05);
                     }
                 }
             }
 
             .dropdown-menu {
                 top: 100%;
-                left: -65%;
+                left: -90%;
                 padding: 0;
                 border: 2px solid #fff;
                 border-radius: 3px;
