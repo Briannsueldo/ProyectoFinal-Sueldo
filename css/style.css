@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sixtyfour:SCAN@-32&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 * {
   background-color: #000;
   margin: 0;
@@ -50,12 +51,15 @@ header {
   transition: 0.5s ease all;
 }
 .bg-body-tertiary .navbar-collapse .navbar-nav .nav-link:hover {
-  /* color: #d6d5d5; */
+  color: #d6d5d5;
   transform: scale(1.05);
+}
+.bg-body-tertiary .navbar-collapse .navbar-nav .nav-item .dropdown-toggle:hover {
+  transform: none;
 }
 .bg-body-tertiary .navbar-collapse .navbar-nav .dropdown-menu {
   top: 100%;
-  left: -5vh !important;
+  left: -65%;
   padding: 0;
   border: 2px solid #fff;
   border-radius: 3px;
@@ -132,13 +136,22 @@ header {
   text-decoration: wavy;
   color: #fff;
   font-family: "Roboto", sans-serif;
-  margin-inline: 0.5vh;
   font-weight: 500;
 }
 .footer .footer__left span:last-child {
   display: flex;
   align-items: end;
   height: 100%;
+  color: #7c7c7c;
+  font-weight: 300;
+}
+.footer .footer__left span:last-child a {
+  color: #7c7c7c;
+  transition: 0.5s;
+  padding-inline: 0.5vh;
+}
+.footer .footer__left span:last-child a:hover {
+  color: #fff;
 }
 .footer .footer__center .footer__center__form {
   display: flex;
@@ -200,7 +213,9 @@ header {
   }
 }
 .footer .footer__right div {
-  background-color: transparent;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
 }
 .footer .footer__right div p {
   color: #fff;
@@ -211,14 +226,18 @@ header {
   font-weight: 500;
   font-size: 2vh;
 }
-.footer .footer__right .social a {
-  background-color: transparent;
+.footer .footer__right .social {
+  justify-content: space-evenly;
+  flex-direction: row;
 }
-.footer .footer__right .social a img {
-  background-color: transparent;
-  height: 4vh;
-  padding-inline: 1vh;
-  padding-top: 1vh;
+.footer .footer__right .social a .svg_icon {
+  height: 25px;
+  width: 25px;
+  fill: #fff;
+  transition: 0.5s;
+}
+.footer .footer__right .social a .svg_icon:hover {
+  fill: rgb(234, 255, 106);
 }
 
 .main__container {
@@ -1038,18 +1057,22 @@ img {
   display: flex;
   align-items: center;
   position: relative;
-  gap: 10px;
+  gap: 20px;
   top: 10px;
 }
 .main__container .form__container .login__container .login__methods__container .login__methods a {
   background-color: transparent;
   left: 0;
 }
-.main__container .form__container .login__container .login__methods__container .login__methods img {
-  background: none;
-  height: 100%;
-  padding-inline: 1vh;
-  align-items: center;
+.main__container .form__container .login__container .login__methods__container .login__methods .svg_icon {
+  height: 40px;
+  width: 40px;
+  fill: #fff;
+  background-color: transparent;
+  transition: 0.5s;
+}
+.main__container .form__container .login__container .login__methods__container .login__methods .svg_icon:hover {
+  fill: rgb(234, 255, 106);
 }
 @media screen and (max-width: 720px) {
   .main__container .form__container .login__container .login__methods__container {

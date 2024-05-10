@@ -170,7 +170,7 @@
                     display: flex;
                     align-items: center;
                     position: relative;
-                    gap: 10px;
+                    gap: 20px;
                     top: 10px;
 
                     a {
@@ -178,11 +178,16 @@
                         left: 0;
                     }
 
-                    img {
-                        background: none;
-                        height: 100%;
-                        padding-inline: 1vh;
-                        align-items: center;
+                    .svg_icon {
+                        height: 40px;
+                        width: 40px;
+                        fill: $main-w;
+                        background-color: transparent;
+                        transition: 0.5s;
+
+                        &:hover {
+                            fill: $green;
+                        }
                     }
                 }
 

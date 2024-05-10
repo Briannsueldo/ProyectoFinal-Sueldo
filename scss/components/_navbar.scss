@@ -27,14 +27,24 @@
                 transition: 0.5s ease all;
 
                 &:hover {
-                    /* color: #d6d5d5; */
+                    color: #d6d5d5;
                     transform: scale(1.05);
+                }
+            }
+
+            .nav-item {
+                
+                .dropdown-toggle {
+
+                    &:hover {
+                        transform: none;
+                    }
                 }
             }
 
             .dropdown-menu {
                 top: 100%;
-                left: -5vh !important;
+                left: -65%;
                 padding: 0;
                 border: 2px solid #fff;
                 border-radius: 3px;
