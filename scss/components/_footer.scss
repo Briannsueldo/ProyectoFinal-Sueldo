@@ -1,17 +1,15 @@
 
 .footer {
     top: 100%;
-    height: 20vh;
     width: 100%;
     position: relative;
     margin-top: 0;
     margin-bottom: 0;
-    color: red;
-    background-color: #000;
+    background-color: $main-dark;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
-    @include mobile {
+    @include queries(670px) {
         grid-template-columns: repeat(1, 1fr);
     }
     
@@ -23,7 +21,7 @@
         background-color: transparent;
         margin: 2vh;
 
-        @include mobile {
+        @include queries(670px) {
             display: none;
         }
 
@@ -45,16 +43,16 @@
                 display: flex;
                 align-items: end;
                 height: 100%;
-                color: #7c7c7c;
+                color: /* #7c7c7c */ $main-gray;
                 font-weight: 300;
 
                 a {
-                    color: #7c7c7c;
+                    color: /* #7c7c7c */ $main-gray;
                     transition: 0.5s;
                     padding-inline: 0.5vh;
 
                     &:hover {
-                        color: #fff;
+                        color: $main-light;
                     }
                 }
             }
@@ -77,7 +75,7 @@
         }
     
         p {
-            color: #fff;
+            color: $main-light;
             background-color: transparent;
             font-family: "Roboto", sans-serif;
             margin: 0;
@@ -86,10 +84,10 @@
         }
     
         input {
-            color: #fff;
+            color: $main-light;
             background-color: transparent;
             border: none;
-            border-bottom: 1px solid $main-w;
+            border-bottom: 1px solid $main-light;
             font-family: "Roboto", sans-serif;
             padding: 1vh;
             
@@ -101,10 +99,10 @@
     
         button {
             position: relative;
-            color: #fff;
+            color: $main-light;
             background-color: transparent;
             border-radius: 5px;
-            border: 1px solid #fff;
+            border: 1px solid $main-light;
             padding: 0.5vh;
             font-family: "Roboto", sans-serif;
             transition: 0.5s ease;
@@ -113,8 +111,8 @@
             font-weight: 500;
     
             &:hover {
-                background-color: $main-w;
-                color: $main-b;
+                background-color: $main-light;
+                color: $main-dark;
             }
         }
     }
@@ -128,10 +126,10 @@
         background-color: transparent;
         margin: 2vh;
 
-        @include mobile {
+        @include queries(670px) {
             align-items: center;
             padding-block: 3vh;
-            background-color: $main-b;
+            background-color: $main-dark;
             margin: 0;
         }
     
@@ -161,11 +159,11 @@
                 .svg_icon { 
                     height: 25px;
                     width: 25px;
-                    fill: $main-w;
+                    fill: $main-light;
                     transition: 0.5s;
 
                     &:hover {
-                        fill: $green;
+                        fill: $main-green;
                     }
                 }
             }

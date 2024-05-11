@@ -1,10 +1,10 @@
 
 .bg-body-tertiary {
-    background-color: #000 !important;
+    background-color: $main-dark !important;
     height: 10vh;
     z-index: 1;
     padding-block: 0;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid $main-light;
 
     .logo {
         height: 35px;
@@ -23,7 +23,7 @@
             padding: 1vh;
 
             .nav-link {
-                color: #fff;
+                color: $main-light;
                 transition: 0.5s ease all;
 
                 &:hover {
@@ -51,27 +51,27 @@
                 top: 100%;
                 left: -90%;
                 padding: 0;
-                border: 2px solid #fff;
+                border: 2px solid $main-light;
                 border-radius: 3px;
                 
 
                 .dropdown-item {
-                    color: #fff;
+                    color: $main-light;
                     padding: 1vh;
                     text-align: center;
 
                     &:hover {
-                        background-color: #fff;
-                        color: #000;
+                        background-color: $main-light;
+                        color: $main-dark;
                         transition: 0.5s ease all;
                     }
                 }
             }
 
             .navButton {
-                color: #fff;
-                background-color: #000;
-                border: 1px solid #fff;
+                color: $main-light;
+                background-color: $main-dark;
+                border: 1px solid $main-light;
                 padding: 1vh;
                 padding-inline: 2vh;
                 border-radius: 5px;
@@ -80,24 +80,14 @@
 
                 &:hover {
                     transform: scale(1.05);
-                    background-color: #fff;
-                    color: #000;
+                    background-color: $main-light;
+                    color: $main-dark;
                 }
             }
 
             .nav-link.show {
-                @extend .flex-center; /* Fix para el menu despegable al reducir pantalla */
+                @extend .flex-center;
             }
         }
     }
 }
-
-
-
-
-/* .navbar-expand-lg .navbar-nav .nav-link {
-    display: flex;          
-    align-items: center;        /* Lo mismo que arriba pero cuando no se reduce la pantalla *//*
-} */
-
-

@@ -1,6 +1,23 @@
 
+// General
+
+@mixin flex($j-content, $a-items, $position) {
+    display: flex;
+    justify-content: $j-content;
+    align-items: $a-items;
+    position: $position;
+}
+
 .flex-center {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+// Contact
+
+.font-style-h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
 }
