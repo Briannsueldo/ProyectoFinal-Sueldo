@@ -387,7 +387,7 @@ img {
 .news__container {
   display: grid;
   height: 80vh;
-  width: min(90%, 90rem);
+  width: 90%;
   gap: 5vh;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
