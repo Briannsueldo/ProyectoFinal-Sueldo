@@ -6,7 +6,7 @@
     background: none;
 
     h2 {
-        font-family: "roboto", sans-serif;
+        font-family: $font-sora;
         font-size: 3vh;
         background: none;
     }
@@ -39,7 +39,7 @@
         }
 
         p {
-            font-family: "Roboto", sans-serif;
+            font-family: $font-sora;
             background: none;
             margin: 0;
             font-style: italic;
@@ -101,7 +101,7 @@
                 }
 
                 label {
-                    font-family: "Roboto", sans-serif;
+                    font-family: $font-sora;
                     font-weight: 500;
                     background: none;
                 }
