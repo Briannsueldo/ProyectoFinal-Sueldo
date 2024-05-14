@@ -69,52 +69,55 @@
                     background-color: transparent;
 
                     input {
-                        width: 55%;
+                        width: 70%;
                         padding: 10px;
                         background-color: transparent;
-                        border: none;
-                        border-bottom: 1px solid $main-light;
+                        border: 1px solid #acacac;
+                        border-radius: 0.375rem;
+                        height: 2.5rem;
                         outline: none;
                         color: $main-light;
                         transition: 0.5s;
 
                         &:hover {
-                            transform: scale(1.05);
+                            border: 1px solid $main-light;
                         }
 
                         &::placeholder {
-                            color: $main-light;
+                            color: #acacac;
+                            transition: 0.5s;
                         }
 
-                        @include queries(720px) {
-                            width: 60%;
+                        &:hover::placeholder {
+                            color: $main-light;
                         }
                     }
                 }
 
                 .remember__input {
-                    position: relative;
-                    right: 10.5%;
+                    @include flex(start,center,relative);
+                    width: 70%;
                     padding-bottom: 10px;
                     background-color: transparent;
 
                     label {
                         background-color: transparent;
                         color: $main-light;
+                        padding-left: 0.5rem;
                     }
                 }
 
                 a {
-                    position: relative;
-                    right: 4.5%;
+                    @include flex(start,center,relative);
+                    width: 70%;
                     background-color: transparent;
                     color: $main-light;
                 }
 
                 button {
                     margin: 8%;
-                    padding: 2.5%;
-                    width: 55%;
+                    padding: 0.6rem;
+                    width: 70%;
                     background-color: $main-light;
                     border-radius: 5px;
                     border: none;
@@ -124,16 +127,13 @@
                         background-color: $main-green;
                     }
 
-                    @include queries(550px) {
-                        margin-top: 15%;
-                    }
                 }
 
                 .register__low__size {
                     display: none;
                     margin: 2%;
-                    padding: 2.5%;
-                    width: 55%;
+                    padding: 0.6rem;
+                    width: 70%;
                     background-color: $main-light;
                     border-radius: 5px;
                     border: none;
@@ -223,41 +223,49 @@
                     background-color: transparent;
 
                     input {
-                        width: 55%;
+                        width: 70%;
                         padding: 10px;
                         background-color: transparent;
-                        border: none;
-                        border-bottom: 1px solid $main-light;
+                        border: 1px solid #acacac;
+                        border-radius: 0.375rem;
+                        height: 2.5rem;
                         outline: none;
                         color: $main-light;
-                        transition: transform 0.5s ease;
+                        transition: 0.5s ease;
 
                         &:hover {
-                            transform: scale(1.05);
+                            border: 1px solid $main-light;
                         }
 
                         &::placeholder {
+                            color: #acacac;
+                            transition: 0.5s
+                        }
+
+                        &:hover::placeholder {
                             color: $main-light;
                         }
                     }
                 }
 
                 .terms__input {
-                    position: relative;
+                    @include flex(start,center,relative);
+                    width: 70%;
                     background-color: transparent;
                     font-size: 14px;
 
                     label {
                         background-color: transparent;
                         color: $main-light;
+                        padding-left: 0.5rem;
                     }
                 }
             }
 
             button {
                 margin: 6%;
-                padding: 2.5%;
-                width: 55%;
+                padding: 0.6rem;
+                width: 70%;
                 background-color: $main-light;
                 border-radius: 5px;
                 border: none;

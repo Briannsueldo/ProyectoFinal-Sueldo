@@ -9,7 +9,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
-    @include queries(670px) {
+    @include queries(720px) {
         grid-template-columns: repeat(1, 1fr);
     }
     
@@ -21,7 +21,7 @@
         background-color: transparent;
         margin: 2vh;
 
-        @include queries(670px) {
+        @include queries(720px) {
             display: none;
         }
 
@@ -126,7 +126,7 @@
         background-color: transparent;
         margin: 2vh;
 
-        @include queries(670px) {
+        @include queries(720px) {
             align-items: center;
             padding-block: 3vh;
             background-color: $main-dark;
