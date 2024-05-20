@@ -27,10 +27,6 @@
         border-radius: 10px;
 
         @include queries(720px) {
-            width: 400px;
-        }
-
-        @include queries(720px) {
             width: 300px;
         }
 
@@ -47,8 +43,7 @@
 
             h2 {
                 @extend .font-style-h2;
-                @extend .flex-center;
-                position: relative;
+                @include flex(center,center,relative);
                 padding: 10%;
                 background-color: transparent;
                 color: $main-light;
@@ -202,8 +197,7 @@
 
             h2 {
                 @extend .font-style-h2;
-                @extend .flex-center;
-                position: relative;
+                @include flex(center,center,relative);
                 padding: 10%;
                 background-color: transparent;
                 color: $main-light;

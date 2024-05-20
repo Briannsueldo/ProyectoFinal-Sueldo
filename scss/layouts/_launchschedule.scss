@@ -1,24 +1,35 @@
 
-.background {
+.background__container {
     @include flex(center,center,relative);
     width: 100%;
     overflow: hidden;
 
     img {
-        display: block;
+        display: flex;
         position: relative;
         width: 100%;
         height: 10vh;
     }
+    .phrase {
+        display: inline-block;
+        position: absolute;
+        background-color: transparent;
+        
 
-    h3 {
-        @include flex(center,center, absolute);
-        width: 100%;
-        background: transparent;
-        color: $main-light;
-        font-weight: 400;
-        font-size: 3vh;
-    }
+        h3 {
+            width: 100%;
+            background: transparent;
+            color: $main-light;
+            font-size: 1.4rem;
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 0.15rem solid $main-light;
+            animation: 
+                typing 1s steps(50),
+                border-opacity 0s 1s forwards;
+        }
+    }   
 }
 
 .section__container {
@@ -86,7 +97,7 @@
 
             @include queries(900px) {
                 border-radius: 0 0 30px 30px;
-                background-color: #d3d3d3;
+                /* background-color: #d3d3d3; */
                 height: 60%;
             }
 

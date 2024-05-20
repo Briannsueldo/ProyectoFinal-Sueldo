@@ -21,6 +21,11 @@
         }
     }
 
+    img {
+        height: 100vh;
+        object-fit: cover;
+    }
+
     .mainTitle__container {
         @include flex(center,center,absolute);
         height: fit-content;
@@ -29,37 +34,74 @@
         font-size: x-large;
         color: $main-light;
         background-color: transparent;
+        text-align: center;
         flex-direction: column;
+        padding: 1rem;
 
-        h1 {
-            background-color: transparent;
-            width: 100%;
+        /* @include queries(590px) {
             display: flex;
-            justify-content: center;
-            margin: 0;
-            font-size: 4rem;
-        }
+            width: 100%;
+            height: 100%;
+        } */
 
-        span {
+        .main__title {
+
             background-color: transparent;
-            opacity: 0;
-            transform: translateY(3rem);
-            animation: fade 2s ease forwards;
+            display: inline-block;
+
+            /* @include queries(590px) {
+                display: flex;
+            } */
+            
+            h1 {
+                background-color: transparent;
+                width: 100%;
+                margin: 0;
+                font-size: 4rem;
+                white-space: nowrap;
+                overflow: hidden;
+                border-right: 0.15rem solid $main-light;
+                animation: 
+                    typing 1s steps(50),
+                    border-opacity 0s 1s forwards;
+                
+                @include queries(590px) {
+                    animation: none;
+                    border-right: none;
+                    white-space: wrap;
+                    font-size: 3rem;
+                }
+
+                @include queries(440px) {
+                    font-size: 2rem;
+                }
+            }
         }
 
-        @keyframes fade {
-            to {
-                opacity: 1;
-                transform: translateY(0);
+        .subtitle {
+
+            background-color: transparent;
+
+            span {
+                background-color: transparent;
+                opacity: 0;
+                transform: translateY(3rem);
+                display: block;
+                animation: fade 2.5s ease forwards;
+                font-size: 1.5rem;
+
+                @include queries(590px) {
+                    font-size: 1rem;
+                }
             }
         }
     }
 }
 
-img {
+/* img {
     height: 100vh;
     object-fit: cover;
-}
+} */
 
 .carousel-item {
     position: relative;
@@ -70,6 +112,12 @@ img {
     transition: transform .4s ease-in-out;
     align-items: center;
     justify-content: center;
+
+    img {
+        height: 100vh;
+        object-fit: cover;
+        mask-image: linear-gradient(to top, black 80%, transparent);
+    }
 
     .carousel__link {
         @include flex(center,center,absolute);

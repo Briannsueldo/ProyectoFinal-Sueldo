@@ -23,7 +23,7 @@ header {
   width: 100%;
 }
 
-.flex-center, .main__container .form__container .register__container h2, .main__container .form__container .login__container h2, .main__container, .footer .footer__center, .bg-body-tertiary .navbar-collapse .navbar-nav .nav-link.show {
+.flex-center, .main__container, .footer .footer__center, .bg-body-tertiary .navbar-collapse .navbar-nav .nav-link.show {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,6 +35,25 @@ header {
   font-size: 2.5rem;
 }
 
+@keyframes border-opacity {
+  0% {
+    border-right-color: #fff;
+  }
+  100% {
+    border-right-color: transparent;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes fade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .bg-body-tertiary {
   background-color: #000 !important;
   height: 10vh;
@@ -172,7 +191,7 @@ header {
   font-family: "Inter Tight", sans-serif;
   margin: 0;
   font-weight: 500;
-  font-size: 2vh;
+  font-size: 1rem;
 }
 .footer .footer__center input {
   color: #fff;
@@ -184,7 +203,7 @@ header {
 }
 .footer .footer__center input::placeholder {
   text-align: center;
-  font-size: 2vh;
+  font-size: 1rem;
 }
 .footer .footer__center button {
   position: relative;
@@ -230,7 +249,7 @@ header {
   justify-content: center;
   font-family: "Inter Tight", sans-serif;
   font-weight: 500;
-  font-size: 2vh;
+  font-size: 1rem;
 }
 .footer .footer__right .social {
   justify-content: space-evenly;
@@ -268,6 +287,10 @@ header {
     object-fit: cover;
   }
 }
+.main__container img {
+  height: 100vh;
+  object-fit: cover;
+}
 .main__container .mainTitle__container {
   display: flex;
   justify-content: center;
@@ -279,34 +302,66 @@ header {
   font-size: x-large;
   color: #fff;
   background-color: transparent;
+  text-align: center;
   flex-direction: column;
+  padding: 1rem;
+  /* @include queries(590px) {
+      display: flex;
+      width: 100%;
+      height: 100%;
+  } */
 }
-.main__container .mainTitle__container h1 {
+.main__container .mainTitle__container .main__title {
+  background-color: transparent;
+  display: inline-block;
+  /* @include queries(590px) {
+      display: flex;
+  } */
+}
+.main__container .mainTitle__container .main__title h1 {
   background-color: transparent;
   width: 100%;
-  display: flex;
-  justify-content: center;
   margin: 0;
   font-size: 4rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15rem solid #fff;
+  animation: typing 1s steps(50), border-opacity 0s 1s forwards;
 }
-.main__container .mainTitle__container span {
+@media screen and (max-width: 590px) {
+  .main__container .mainTitle__container .main__title h1 {
+    animation: none;
+    border-right: none;
+    white-space: wrap;
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 440px) {
+  .main__container .mainTitle__container .main__title h1 {
+    font-size: 2rem;
+  }
+}
+.main__container .mainTitle__container .subtitle {
+  background-color: transparent;
+}
+.main__container .mainTitle__container .subtitle span {
   background-color: transparent;
   opacity: 0;
   transform: translateY(3rem);
-  animation: fade 2s ease forwards;
+  display: block;
+  animation: fade 2.5s ease forwards;
+  font-size: 1.5rem;
 }
-@keyframes fade {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+@media screen and (max-width: 590px) {
+  .main__container .mainTitle__container .subtitle span {
+    font-size: 1rem;
   }
 }
 
-img {
-  height: 100vh;
-  object-fit: cover;
-}
-
+/* img {
+    height: 100vh;
+    object-fit: cover;
+} */
 .carousel-item {
   position: relative;
   float: inline-start;
@@ -316,6 +371,11 @@ img {
   transition: transform 0.4s ease-in-out;
   align-items: center;
   justify-content: center;
+}
+.carousel-item img {
+  height: 100vh;
+  object-fit: cover;
+  mask-image: linear-gradient(to top, black 80%, transparent);
 }
 .carousel-item .carousel__link {
   display: flex;
@@ -414,6 +474,7 @@ img {
 .news__container .news__section .news__image {
   transform: scale(0.4);
   overflow: hidden;
+  height: 100vh;
 }
 .news__container .news__section .image__overlay {
   display: flex;
@@ -451,6 +512,7 @@ img {
   position: relative;
   left: 0;
   background: none;
+  padding: 1rem;
 }
 @media screen and (max-width: 900px) {
   .news__container .section__1 .carousel-item .carousel-caption {
@@ -493,6 +555,7 @@ img {
 }
 .news__container .section__2 .image__overlay {
   justify-content: center;
+  padding: 0.5rem;
 }
 @media screen and (max-width: 900px) {
   .news__container .section__2 .image__overlay {
@@ -588,7 +651,7 @@ img {
   margin-bottom: 10vh;
 }
 
-.background {
+.background__container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -596,22 +659,27 @@ img {
   width: 100%;
   overflow: hidden;
 }
-.background img {
-  display: block;
+.background__container img {
+  display: flex;
   position: relative;
   width: 100%;
   height: 10vh;
 }
-.background h3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.background__container .phrase {
+  display: inline-block;
   position: absolute;
+  background-color: transparent;
+}
+.background__container .phrase h3 {
   width: 100%;
   background: transparent;
   color: #fff;
-  font-weight: 400;
-  font-size: 3vh;
+  font-size: 1.4rem;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15rem solid #fff;
+  animation: typing 1s steps(50), border-opacity 0s 1s forwards;
 }
 
 .section__container {
@@ -683,7 +751,7 @@ img {
 @media screen and (max-width: 900px) {
   .section__container .main__container .second__container {
     border-radius: 0 0 30px 30px;
-    background-color: #d3d3d3;
+    /* background-color: #d3d3d3; */
     height: 60%;
   }
 }
@@ -913,11 +981,6 @@ img {
 }
 @media screen and (max-width: 720px) {
   .main__container .form__container {
-    width: 400px;
-  }
-}
-@media screen and (max-width: 720px) {
-  .main__container .form__container {
     width: 300px;
   }
 }
@@ -937,6 +1000,9 @@ img {
   }
 }
 .main__container .form__container .login__container h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   padding: 10%;
   background-color: transparent;
@@ -1084,6 +1150,9 @@ img {
   }
 }
 .main__container .form__container .register__container h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   padding: 10%;
   background-color: transparent;

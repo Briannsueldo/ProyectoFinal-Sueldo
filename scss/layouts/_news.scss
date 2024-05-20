@@ -46,6 +46,7 @@
         .news__image {
             transform: scale(0.4);
             overflow: hidden;
+            height: 100vh;
         }
 
         .image__overlay {
@@ -86,6 +87,7 @@
                 position: relative;
                 left: 0;
                 background: none;
+                padding: 1rem;
 
                 @include queries(900px) {
                     display: flex;
@@ -137,6 +139,7 @@
         
         .image__overlay {
             justify-content: center;
+            padding: .5rem;
 
             @include queries(900px) {
                 height: 50%;

@@ -21,3 +21,21 @@
     font-weight: 700;
     font-size: 2.5rem;
 }
+
+// Animaciones
+
+@keyframes border-opacity {
+    0% { border-right-color: $main-light}
+    100% { border-right-color: transparent; }
+}
+
+@keyframes typing {
+    from { width: 0 }
+}
+
+@keyframes fade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

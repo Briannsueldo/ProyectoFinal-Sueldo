@@ -43,11 +43,11 @@
                 display: flex;
                 align-items: end;
                 height: 100%;
-                color: /* #7c7c7c */ $main-gray;
+                color: $main-gray;
                 font-weight: 300;
 
                 a {
-                    color: /* #7c7c7c */ $main-gray;
+                    color: $main-gray;
                     transition: 0.5s;
                     padding-inline: 0.5vh;
 
@@ -80,7 +80,7 @@
             font-family: $font-sora;
             margin: 0;
             font-weight: 500;
-            font-size: 2vh;
+            font-size: 1rem;
         }
     
         input {
@@ -93,7 +93,7 @@
             
             &::placeholder {
                 text-align: center;
-                font-size: 2vh;
+                font-size: 1rem;
             }
         }
     
@@ -145,7 +145,7 @@
                 justify-content: center;
                 font-family: $font-sora;
                 font-weight: 500;
-                font-size: 2vh;
+                font-size: 1rem;
             }
         }
         
