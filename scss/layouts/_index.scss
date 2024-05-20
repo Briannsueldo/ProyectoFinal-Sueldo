@@ -11,6 +11,7 @@
     .main__background {
         width: 100%;
         position: relative;
+        mask-image: linear-gradient(black 50%, transparent);
 
         @include queries(550px) {
             background-size: auto;
@@ -22,44 +23,34 @@
 
     .mainTitle__container {
         @include flex(center,center,absolute);
-        height: 100%;
-        width: 100%;
+        height: fit-content;
+        width: fit-content;
         text-align: center;
         font-size: x-large;
         color: $main-light;
         background-color: transparent;
+        flex-direction: column;
 
-        .mainTitle {
-            background: transparent;
-            margin-bottom: 0;
-            margin-inline: 5vh;
+        h1 {
+            background-color: transparent;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            font-size: 4rem;
+        }
 
-            span {
-                background-color: transparent;
-                font-family: $font-sora;
-                font-style: italic;
-                font-weight: 100;
+        span {
+            background-color: transparent;
+            opacity: 0;
+            transform: translateY(3rem);
+            animation: fade 2s ease forwards;
+        }
 
-                &:first-child {
-                    display: flex;
-                    font-weight: 400;
-                }
-
-                &:last-child {
-                    display: flex;
-                    justify-content: end;
-                    font-weight: 100;
-
-                    @include queries(550px) {
-                        justify-content: center;
-                    }
-                }
-
-                @include queries(550px) {
-                    &:nth-child(2) {
-                        display: none;
-                    }
-                }
+        @keyframes fade {
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     }

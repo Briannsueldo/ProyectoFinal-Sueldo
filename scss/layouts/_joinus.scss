@@ -258,6 +258,11 @@
                         background-color: transparent;
                         color: $main-light;
                         padding-left: 0.5rem;
+
+                        a {
+                            background-color: transparent;
+                            color: $main-light;
+                        }
                     }
                 }
             }

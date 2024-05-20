@@ -84,11 +84,15 @@
 
                 input {
                     height: 5vh;
-                    border-radius: 2.5px;
                     border: 1px solid $main-gray;
                     background: none;
                     border-radius: .375rem;
                     padding: .375rem 2.25rem .375rem .75rem;
+                    transition: 0.1s ease;
+
+                    &:focus {
+                        outline: 4px solid #c2dbfe;
+                    }
                 }
 
                 &:nth-of-type(5) textarea {
@@ -97,7 +101,12 @@
                     background: none;
                     border-radius: .375rem;
                     border: 1px solid $main-gray;
-                    padding: .375rem .75rem .375rem .75rem;                
+                    padding: .375rem .75rem .375rem .75rem;
+                    transition: 0.1s ease;
+
+                    &:focus {
+                        outline: 4px solid #c2dbfe;
+                    }
                 }
 
                 label {
@@ -109,6 +118,7 @@
                 .form-select {
                     border: 1px solid $main-gray;
                     border-radius: .375rem;
+                    height: 5vh;
 
                     option {
                         background: none;
