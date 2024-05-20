@@ -829,7 +829,7 @@ header {
   align-items: normal;
   position: relative;
   width: 80%;
-  height: 75vh;
+  height: 80vh;
   margin-bottom: 10vh;
   background: none;
 }
@@ -904,7 +904,7 @@ header {
   background: none;
 }
 .contact__main__container .contact__container .form__contact .form__groups input {
-  height: 5vh;
+  height: 2.5rem;
   border: 1px solid #767676;
   background: none;
   border-radius: 0.375rem;
@@ -934,13 +934,13 @@ header {
 .contact__main__container .contact__container .form__contact .form__groups .form-select {
   border: 1px solid #767676;
   border-radius: 0.375rem;
-  height: 5vh;
+  height: 2.5rem;
 }
 .contact__main__container .contact__container .form__contact .form__groups .form-select option {
   background: none;
 }
 .contact__main__container .contact__container .form__contact button {
-  height: 6vh;
+  height: 2.5rem;
   border-radius: 0.375rem;
   border: 1px solid #767676;
   transition: 0.5s ease all;
