@@ -38,20 +38,10 @@
         flex-direction: column;
         padding: 1rem;
 
-        /* @include queries(590px) {
-            display: flex;
-            width: 100%;
-            height: 100%;
-        } */
-
         .main__title {
 
             background-color: transparent;
             display: inline-block;
-
-            /* @include queries(590px) {
-                display: flex;
-            } */
             
             h1 {
                 background-color: transparent;
@@ -66,9 +56,6 @@
                     border-opacity 0s 1s forwards;
                 
                 @include queries(590px) {
-                    animation: none;
-                    border-right: none;
-                    white-space: wrap;
                     font-size: 3rem;
                 }
 
@@ -97,11 +84,6 @@
         }
     }
 }
-
-/* img {
-    height: 100vh;
-    object-fit: cover;
-} */
 
 .carousel-item {
     position: relative;

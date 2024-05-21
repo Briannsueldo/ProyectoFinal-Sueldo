@@ -305,18 +305,10 @@ header {
   text-align: center;
   flex-direction: column;
   padding: 1rem;
-  /* @include queries(590px) {
-      display: flex;
-      width: 100%;
-      height: 100%;
-  } */
 }
 .main__container .mainTitle__container .main__title {
   background-color: transparent;
   display: inline-block;
-  /* @include queries(590px) {
-      display: flex;
-  } */
 }
 .main__container .mainTitle__container .main__title h1 {
   background-color: transparent;
@@ -330,9 +322,6 @@ header {
 }
 @media screen and (max-width: 590px) {
   .main__container .mainTitle__container .main__title h1 {
-    animation: none;
-    border-right: none;
-    white-space: wrap;
     font-size: 3rem;
   }
 }
@@ -358,10 +347,6 @@ header {
   }
 }
 
-/* img {
-    height: 100vh;
-    object-fit: cover;
-} */
 .carousel-item {
   position: relative;
   float: inline-start;
